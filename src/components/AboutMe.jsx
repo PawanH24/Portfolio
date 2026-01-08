@@ -12,21 +12,25 @@ export const AboutMe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Aspiring Frontend Developer
+              Aspiring Computer Science Graduate
             </h3>
 
             <p className="text-muted-foreground">
-              I'm a recent Computer Science graduate passionate about creating
-              clean, responsive, and user-friendly web experiences. I enjoy
-              building projects that combine creativity with problem-solving,
-              and I'm actively looking for a Frontend Development Internship to
-              grow my skills and contribute to real-world applications.
+              I’m a recent Computer Science graduate with a strong interest in
+              building, analyzing, and improving software systems. I enjoy
+              working across different aspects of technology—from application
+              development and testing to problem-solving and system design—and
+              I’m motivated to continuously learn and adapt in real-world
+              environments.
             </p>
 
             <p className="text-muted-foreground">
-              I’ve worked on a variety of personal and academic projects—from
-              browser extensions to JavaScript games and full-stack web
-              apps—allowing me to explore modern web technologies hands-on.
+              Through academic and personal projects, I’ve gained hands-on
+              experience developing, testing, and documenting web applications,
+              browser extensions, and interactive projects. I enjoy
+              collaborating with others, translating requirements into practical
+              solutions, and contributing to technology-driven teams where
+              quality and usability matter.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -51,10 +55,14 @@ export const AboutMe = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">
+                    {" "}
+                    Software & Web Development
+                  </h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Building and maintaining web-based applications with a focus
+                    on clean structure, responsiveness, and reliability using
+                    modern tools and frameworks.
                   </p>
                 </div>
               </div>
@@ -65,10 +73,14 @@ export const AboutMe = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">
+                    Software Testing & Quality
+                  </h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Evaluating applications to ensure functionality,
+                    reliability, and consistency by identifying issues,
+                    validating requirements, and improving overall software
+                    quality.
                   </p>
                 </div>
               </div>
@@ -82,8 +94,8 @@ export const AboutMe = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground">
-                    Turning ideas into working prototypes using modern tools and
-                    frameworks.
+                    Turning ideas into working prototypes using modern tools to
+                    deliver functional solutions.
                   </p>
                 </div>
               </div>
