@@ -35,17 +35,11 @@ export function FooterSection() {
               design. Let's build something extraordinary together.
             </p>
             <div className="flex items-center gap-4">
-              <SocialLink href="#" label="GitHub">
+              <SocialLink href="https://github.com/PawanH24" label="GitHub">
                 <Github />
               </SocialLink>
               <SocialLink href="#" label="LinkedIn">
                 <Linkedin />
-              </SocialLink>
-              <SocialLink href="#" label="Twitter">
-                <Twitter />
-              </SocialLink>
-              <SocialLink href="#" label="Instagram">
-                <Instagram />
               </SocialLink>
             </div>
           </div>
