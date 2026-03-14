@@ -38,7 +38,7 @@ export function FooterSection() {
               <SocialLink href="https://github.com/PawanH24" label="GitHub">
                 <Github />
               </SocialLink>
-              <SocialLink href="#" label="LinkedIn">
+              <SocialLink href="https://www.linkedin.com/in/pawan-hada-7830ba294/" label="LinkedIn">
                 <Linkedin />
               </SocialLink>
             </div>
