@@ -10,7 +10,7 @@ const projects = [
     description:
       "A school management app to manage students, teachers, and stationary in one place.",
     image: PosterEx,
-    tags: ["React","NextJs","TailwindCSS],
+    tags: ["React","NextJs","TailwindCSS"],
     demoUrl: "https://managementsys119.netlify.app/",
     githubUrl: "https://github.com/PawanH24/School-Management-System",
   },
