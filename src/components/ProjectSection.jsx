@@ -1,18 +1,18 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import PosterGame from "../assets/Postergame.png";
 import PosterMovie from "../assets/poster2.png";
-import PosterEx from "../assets/poster3.png";
+import PosterEx from "../assets/systemschool.png";
 
 const projects = [
   {
     id: 1,
-    title: "Bookmark Extension",
+    title: "School Management System",
     description:
-      "A simple Chrome extension for saving, organizing, and accessing your bookmarks instantly.",
+      "A school management app to manage students, teachers, and stationary in one place.",
     image: PosterEx,
-    tags: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "",
-    githubUrl: "https://github.com/PawanH24/Bookmark-Chrome-Extension",
+    tags: ["React","NextJs","TailwindCSS],
+    demoUrl: "https://managementsys119.netlify.app/",
+    githubUrl: "https://github.com/PawanH24/School-Management-System",
   },
   {
     id: 2,
