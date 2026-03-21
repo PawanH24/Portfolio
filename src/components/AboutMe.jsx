@@ -12,7 +12,7 @@ export const AboutMe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Aspiring Computer Science Graduate
+              CS Graduate — Frontend & QA
             </h3>
 
             <p className="text-muted-foreground">
@@ -25,25 +25,15 @@ export const AboutMe = () => {
             </p>
 
             <p className="text-muted-foreground">
-              Through academic and personal projects, I’ve gained hands-on
-              experience developing, testing, and documenting web applications,
-              browser extensions, and interactive projects. I enjoy
-              collaborating with others, translating requirements into practical
-              solutions, and contributing to technology-driven teams where
-              quality and usability matter.
+              I've built and shipped features across live production software
+              using React, Next.js, and TypeScript, and have hands-on experience
+              investigating and documenting bugs in real products.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
-              </a>
-
-              <a
-                href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download CV
               </a>
             </div>
           </div>
@@ -60,9 +50,10 @@ export const AboutMe = () => {
                     Software & Web Development
                   </h4>
                   <p className="text-muted-foreground">
-                    Building and maintaining web-based applications with a focus
-                    on clean structure, responsiveness, and reliability using
-                    modern tools and frameworks.
+                    Designing and building responsive, component-based web
+                    applications using React, Next.js, TypeScript, and Tailwind
+                    CSS — with a focus on clean code, reusability, and
+                    real-world performance.
                   </p>
                 </div>
               </div>
@@ -77,25 +68,10 @@ export const AboutMe = () => {
                     Software Testing & Quality
                   </h4>
                   <p className="text-muted-foreground">
-                    Evaluating applications to ensure functionality,
-                    reliability, and consistency by identifying issues,
-                    validating requirements, and improving overall software
-                    quality.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
-                  <p className="text-muted-foreground">
-                    Turning ideas into working prototypes using modern tools to
-                    deliver functional solutions.
+                    Finding what breaks and understanding why. Experienced in
+                    manual testing, exploratory testing, API verification with
+                    Postman, and error monitoring with Sentry across live
+                    production software.
                   </p>
                 </div>
               </div>

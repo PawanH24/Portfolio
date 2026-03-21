@@ -2,7 +2,10 @@ import { Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 
 export function FooterSection() {
   return (
-    <footer className="relative w-full bg-background pt-16 pb-8 overflow-hidden">
+    <footer
+      id="contact"
+      className="relative w-full bg-background pt-16 pb-8 overflow-hidden"
+    >
       {/* Top subtle gradient border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
@@ -38,7 +41,10 @@ export function FooterSection() {
               <SocialLink href="https://github.com/PawanH24" label="GitHub">
                 <Github />
               </SocialLink>
-              <SocialLink href="https://www.linkedin.com/in/pawan-hada-7830ba294/" label="LinkedIn">
+              <SocialLink
+                href="https://www.linkedin.com/in/pawan-hada-7830ba294/"
+                label="LinkedIn"
+              >
                 <Linkedin />
               </SocialLink>
             </div>
@@ -52,10 +58,32 @@ export function FooterSection() {
             <p className="text-foreground/70 text-sm">
               Drop your email to get in touch or hear about my latest projects.
             </p>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+            <form
+              className="flex gap-2"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const data = new FormData(form);
+
+                const res = await fetch("https://formspree.io/f/mjgadvge", {
+                  method: "POST",
+                  body: data,
+                  headers: { Accept: "application/json" },
+                });
+
+                if (res.ok) {
+                  alert("Message sent! I'll get back to you soon.");
+                  form.reset();
+                } else {
+                  alert("Something went wrong. Please try again.");
+                }
+              }}
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
+                required
                 className="flex-1 px-4 py-2 rounded-md bg-card/50 border border-border focus:border-primary/50 focus:outline-none transition-colors"
               />
               <button type="submit" className="cosmic-button flex items-center">

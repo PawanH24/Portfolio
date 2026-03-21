@@ -1,41 +1,55 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import {
-  Code2,
-  Database,
-  Wrench,
-  Layout,
-  Terminal,
-  FileCode,
-  GitBranch,
-  Figma as FigmaIcon,
-  Braces,
-  Table,
-} from "lucide-react";
+
+const BrandIcon = ({
+  slug,
+  source = "simple",
+  invert = false,
+  className = "w-7 h-7",
+}) => {
+  const url =
+    source === "devicon"
+      ? `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-original.svg`
+      : `https://cdn.simpleicons.org/${slug}`;
+
+  return (
+    <img
+      src={url}
+      alt={slug}
+      className={className}
+      style={invert ? { filter: "invert(1)" } : undefined}
+    />
+  );
+};
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", category: "frontend", icon: Layout },
-  { name: "JavaScript", category: "frontend", icon: FileCode },
-  { name: "React", category: "frontend", icon: Code2 },
-  { name: "TypeScript", category: "frontend", icon: Braces },
-  { name: "Tailwind CSS", category: "frontend", icon: Layout },
+  { name: "HTML/CSS", category: "frontend", iconSlug: "html5" },
+  { name: "JavaScript", category: "frontend", iconSlug: "javascript" },
+  { name: "React", category: "frontend", iconSlug: "react" },
+  { name: "TypeScript", category: "frontend", iconSlug: "typescript" },
+  { name: "Tailwind CSS", category: "frontend", iconSlug: "tailwindcss" },
 
   // Programming
-  { name: "Python", category: "programming", icon: Terminal },
-  { name: "Java", category: "programming", icon: Code2 },
-  { name: "C++", category: "programming", icon: FileCode },
-  { name: "C#", category: "programming", icon: Braces },
-  { name: "Gdscript", category: "programming", icon: Terminal },
+  { name: "Python", category: "programming", iconSlug: "python" },
+  { name: "Java", category: "programming", iconSlug: "openjdk", invert: true },
+  { name: "C++", category: "programming", iconSlug: "cplusplus" },
+  {
+    name: "C#",
+    category: "programming",
+    iconSlug: "csharp",
+    source: "devicon",
+  },
+  { name: "GDScript", category: "programming", iconSlug: "godotengine" },
 
   // Database
-  { name: "PostgreSQL", category: "database", icon: Database },
+  { name: "PostgreSQL", category: "database", iconSlug: "postgresql" },
 
   // Tools
-  { name: "Git/GitHub", category: "tools", icon: GitBranch },
-  { name: "Figma", category: "tools", icon: FigmaIcon },
-  { name: "VS Code", category: "tools", icon: Code2 },
-  { name: "Matlab", category: "tools", icon: Table },
+  { name: "Git/GitHub", category: "tools", iconSlug: "github", invert: true },
+  { name: "Figma", category: "tools", iconSlug: "figma" },
+  { name: "Postman", category: "tools", iconSlug: "postman" },
+  { name: "Sentry", category: "tools", iconSlug: "sentry" },
 ];
 
 const categories = ["all", "frontend", "programming", "database", "tools"];
@@ -44,7 +58,7 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "all" || skill.category === activeCategory,
   );
 
   return (
@@ -64,7 +78,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary",
               )}
             >
               {category}
@@ -74,23 +88,23 @@ export const SkillsSection = () => {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredSkills.map((skill) => {
-            const Icon = skill.icon;
-            return (
-              <div
-                key={skill.name}
-                className="bg-card p-6 rounded-lg shadow-xs card-hover"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 rounded-lg bg-secondary/50 flex items-center justify-center mb-4">
-                    <Icon className="w-7 h-7 text-primary" />
-                  </div>
-
-                  <h3 className="font-semibold text-lg mb-1">{skill.name}</h3>
+          {filteredSkills.map((skill) => (
+            <div
+              key={skill.name}
+              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+            >
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 rounded-lg bg-secondary/50 flex items-center justify-center mb-4">
+                  <BrandIcon
+                    slug={skill.iconSlug}
+                    source={skill.source}
+                    invert={skill.invert}
+                  />
                 </div>
+                <h3 className="font-semibold text-lg mb-1">{skill.name}</h3>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
