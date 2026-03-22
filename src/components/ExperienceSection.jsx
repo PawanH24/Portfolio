@@ -10,7 +10,7 @@ const experiences = [
     period: "Jan 2026 – Mar 2026",
     type: "Internship",
     description:
-      "Built and maintained responsive web applications using React and TypeScript. Collaborated with design teams to implement pixel-perfect UIs and improve overall performance.",
+      "Worked on two live products — an ERP accounting system and a SaaS tenant management panel. Built view pages across 10+ modules using React, Next.js, TypeScript, and Tailwind CSS. Investigated and resolved critical bugs through root cause analysis, verified APIs using Postman, and monitored production errors with Sentry.",
     tech: ["React", "TypeScript", "Next Js", "Tailwind CSS", "Git"],
   },
 ];
@@ -25,7 +25,7 @@ export const ExperienceSection = () => {
   const [expanded, setExpanded] = useState(0);
 
   return (
-    <section id="experience" className="py-24 px-4 relative">
+    <section id="exp" className="py-24 px-4 relative">
       {/* Subtle background glow matching the theme */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
